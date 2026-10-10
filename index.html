@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>0928 产品目录</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="container hud-active">
+    
+    <!-- 顶部极简毛玻璃顶栏 -->
+    <header class="top-bar">
+      <div class="brand-badge">
+        <span class="brand-dot"></span>
+        <span class="brand-title">0928 产品目录</span>
+      </div>
+      <div class="top-actions">
+        <button id="menu-btn" class="action-btn menu-btn" type="button">
+          <span class="btn-text">目录索引</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 主展示舞台 -->
+    <main class="swiper-stage" id="swiper-stage">
+      <div class="swiper-wrapper" id="swiper-wrapper">
+        <!-- 由 JS 渲染 12 页画册 -->
+      </div>
+    </main>
+
+    <!-- 底部悬浮毛玻璃 HUD -->
+    <footer class="bottom-hud">
+      <div class="hud-capsule">
+        <button id="prev-btn" class="nav-arrow" type="button" aria-label="上一页">
+          <span class="arrow-icon">‹</span>
+        </button>
+
+        <div class="page-indicator" id="page-indicator-btn">
+          <div class="page-numbers">
+            <span class="num-current" id="current-page-text">01</span>
+            <span class="num-divider">/</span>
+            <span class="num-total" id="total-page-text">12</span>
+          </div>
+          <div class="hud-progress-bg">
+            <div class="hud-progress-bar" id="hud-progress-bar" style="width: 8.33%;"></div>
+          </div>
+        </div>
+
+        <button id="next-btn" class="nav-arrow" type="button" aria-label="下一页">
+          <span class="arrow-icon">›</span>
+        </button>
+      </div>
+
+      <div class="touch-hint">
+        <span class="hint-text">双指捏合缩放 · 放大后向各方位拖动 · 双击快速放大</span>
+      </div>
+    </footer>
+
+    <!-- 快速目录索引抽屉 (Bottom Drawer) -->
+    <div id="drawer-overlay" class="drawer-overlay">
+      <div class="drawer-content" id="drawer-content">
+        <div class="drawer-header">
+          <div class="drawer-handle"></div>
+          <div class="drawer-title-row">
+            <span class="drawer-title">全部页面目录 (共 12 页)</span>
+            <button id="drawer-close-btn" class="drawer-close-btn" type="button">✕</button>
+          </div>
+        </div>
+        <div class="drawer-grid-scroll">
+          <div class="drawer-grid" id="drawer-grid">
+            <!-- 由 JS 动态渲染缩略图卡片 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
